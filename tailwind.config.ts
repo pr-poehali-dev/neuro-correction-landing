@@ -17,8 +17,18 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		screens: {
+			'xs': '475px',
+		},
+		fontFamily: {
+			'montserrat': ['Montserrat', 'sans-serif'],
+			'open-sans': ['Open Sans', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				'medical-blue': 'hsl(214, 84%, 56%)',
+				'medical-dark': 'hsl(214, 32%, 21%)',
+				'medical-light': 'hsl(210, 17%, 98%)',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +94,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					from: {
+						transform: 'translateX(-100px)',
+						opacity: '0'
+					},
+					to: {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out'
 			}
 		}
 	},
